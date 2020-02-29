@@ -31,6 +31,22 @@ const server = http.createServer((req, res) => {
       }
     )
   }
+
+  // REST API - we don't serve HTML, we serve JSON
+    // Fetch data from a database and serve that
+   // Usually, use Express (framework) for doing this
+  if (req.url === '/api/users') {
+    // Hard coded data
+    const users = [
+      { name: 'Bob Smith', age: 38 },
+      { name: 'John Doe', age: 30 }
+    ]
+
+    res.writeHead(200, {
+      'Content-Type': 'application/json'
+    })
+    res.end(JSON.stringify(users))
+  }
 })
 
 // When we deploy it, tt's not going to run in the same port everytime
