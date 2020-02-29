@@ -1,5 +1,8 @@
-const Person = require('./person')
+const Logger = require('./logger');
 
-const person1 = new Person('John Doe', 30)
-
-person1.greeting()
+// Logger is a class, so we need to instantiate it
+const logger = new Logger();
+// Adding event listener
+logger.on('message', (data) => console.log('Called listener:', data));
+// Calling the log method of the logger instance
+logger.log('Hello World');
