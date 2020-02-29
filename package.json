@@ -1,0 +1,11 @@
+{
+  "name": "node-course",
+  "version": "1.0.0",
+  "description": "Traversy Media Node.js crash course",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Marina Costa",
+  "license": "ISC"
+}
