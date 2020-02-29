@@ -6,12 +6,22 @@ const server = http.createServer((req, res) => {
   // Log the url of the request to the console
   // console.log(req.url)
 
-  if (req.url === '/') {
-  // Add content-type to response header
-    res.writeHead(200,
-      { 'Content-Type': 'text/html' })
-    res.end('<h1>Home</h1>')
-  }
+  fs.readFile(
+    path.join(__dirname, '/public', 'index.html'),
+    (err, content) => {
+      if (req.url === '/') {
+        if (err) throw err;
+        // Add content-type to response header
+        res.writeHead(200,
+          { 'Content-Type': 'text/html' })
+        // Output the content of the file index.html
+        res.end(content)
+      }
+    }
+  )
+
+
+  
 })
 
 // When we deploy it, tt's not going to run in the same port everytime
