@@ -3,7 +3,15 @@ const path = require('path');
 const fs = require('fs');
 
 const server = http.createServer((req, res) => {
+  // Log the url of the request to the console
+  // console.log(req.url)
 
+  if (req.url === '/') {
+  // Add content-type to response header
+    res.writeHead(200,
+      { 'Content-Type': 'text/html' })
+    res.end('<h1>Home</h1>')
+  }
 })
 
 // When we deploy it, tt's not going to run in the same port everytime
