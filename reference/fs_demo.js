@@ -6,4 +6,13 @@ const path = require('path');
 fs.mkdir(path.join(__dirname, '/test'), {}, err => {
   if (err) throw err;
   console.log('Folder created');
-}) //assync but default
+}); //assync but default
+
+// Create and write to file
+fs.writeFile(path.join(__dirname, '/test', 'hello.txt'),
+  'Hello World!',
+  err => {
+    if (err) throw err;
+    console.log('File written to...');
+  }
+); //assync but default
