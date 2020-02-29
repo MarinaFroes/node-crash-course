@@ -17,3 +17,6 @@ console.log(myUrl.pathname);
 
 // Serialized query - everything after the question mark (?)
 console.log(myUrl.search);
+
+// Params object
+console.log(myUrl.searchParams);
