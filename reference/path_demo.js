@@ -5,3 +5,6 @@ console.log(path.basename(__filename));
 
 // Directory name - same result as using __dirname
 console.log(path.dirname(__filename));
+
+// File extension
+console.log(path.extname(__filename));
