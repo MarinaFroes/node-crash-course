@@ -11,3 +11,7 @@ console.log(path.extname(__filename));
 
 // Create path object
 console.log(path.parse(__filename));
+
+// Concatenate paths
+// To create ../test/hello.html
+console.log(path.join(__dirname, 'test', 'hello.html'))
