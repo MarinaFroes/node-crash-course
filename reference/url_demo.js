@@ -11,3 +11,6 @@ console.log(myUrl.host);
 
 // Hostname (root domain name) - hostname doesn't include the port
 console.log(myUrl.hostname);
+
+// Pathname 
+console.log(myUrl.pathname);
